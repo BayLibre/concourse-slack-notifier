@@ -4,6 +4,10 @@ A structured and opinionated Slack notification resource for [Concourse](https:/
 
 <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/custom.png">
 
+This is an up-to-date fork of https://github.com/mockersf/concourse-slack-notifier/ with [instanced pipeline](https://concourse-ci.org/instanced-pipelines.html) support.
+
+This work is based on https://github.com/aoldershaw/concourse-slack-notifier/tree/support-instance-vars
+
 The message is built by using Concourse's [resource metadata](https://concourse-ci.org/implementing-resources.html#resource-metadata) to show the pipeline, job, build number and a URL.
 
 ## Installing
