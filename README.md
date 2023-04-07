@@ -16,7 +16,7 @@ resource_types:
 - name: slack-notifier
   type: docker-image
   source:
-    repository: mockersf/concourse-slack-notifier
+    repository: mkorpershoek/concourse-slack-notifier
 ```
 
 See the [Concourse docs](https://concourse-ci.org/resource-types.html) for more details on adding `resource_types` to a pipeline config.
