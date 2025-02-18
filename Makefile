@@ -1,4 +1,4 @@
-DOCKER_PREFIX=mkorpershoek
+DOCKER_PREFIX=baylibre
 DOCKER_NAME=concourse-slack-notifier
 
 all: docker
