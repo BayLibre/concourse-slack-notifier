@@ -1,8 +1,8 @@
-# concourse-slack-notifier [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)  [![Docker Pulls](https://img.shields.io/docker/pulls/mkorpershoek/concourse-slack-notifier.svg)](https://hub.docker.com/r/mkorpershoek/concourse-slack-notifier/)
+# concourse-slack-notifier [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)  [![Docker Pulls](https://img.shields.io/docker/pulls/baylibre/concourse-slack-notifier.svg)](https://hub.docker.com/r/baylibre/concourse-slack-notifier/)
 
 A structured and opinionated Slack notification resource for [Concourse](https://concourse.ci/). It started as a rewrite of [arbourd/concourse-slack-alert-resource](https://github.com/arbourd/concourse-slack-alert-resource) in Rust to add a few features, mainly reading the message from a file or being able to send shorter messages that still had a similar format.
 
-<img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/custom.png">
+<img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/custom.png">
 
 This is an up-to-date fork of https://github.com/mockersf/concourse-slack-notifier/ with [instanced pipeline](https://concourse-ci.org/instanced-pipelines.html) support.
 
@@ -20,7 +20,7 @@ resource_types:
 - name: slack-notifier
   type: docker-image
   source:
-    repository: mkorpershoek/concourse-slack-notifier
+    repository: baylibre/concourse-slack-notifier
 ```
 
 See the [Concourse docs](https://concourse-ci.org/resource-types.html) for more details on adding `resource_types` to a pipeline config.
@@ -89,35 +89,35 @@ jobs:
 
 - `custom`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/custom.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/custom.png" width="75%">
 
 - `success`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/success.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/success.png" width="75%">
 
 - `failed`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/failed.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/failed.png" width="75%">
 
 - `started`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/started.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/started.png" width="75%">
 
 - `aborted`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/aborted.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/aborted.png" width="75%">
 
 - `fixed`
 
   Fixed is a special alert type that only alerts if the previous build did not succeed. Fixed requires `username` and `password` to be set for the resource if the pipeline is not public.
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/fixed.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/fixed.png" width="75%">
 
 - `broke`
 
   Broke is a special alert type that only alerts if the previous build succeed. Broke requires `username` and `password` to be set for the resource if the pipeline is not public.
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/broke.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/broke.png" width="75%">
 
 #### Modes
 
@@ -125,12 +125,12 @@ Examples notifications with a messages with the different modes:
 
 - `concise`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/concise.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/concise.png" width="75%">
 
 - `normal`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/normal.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/normal.png" width="75%">
 
 - `normal_with_info`
 
-  <img src="https://raw.githubusercontent.com/makohoek/concourse-slack-notifier/master/img/normal_with_info.png" width="75%">
+  <img src="https://raw.githubusercontent.com/baylibre/concourse-slack-notifier/master/img/normal_with_info.png" width="75%">

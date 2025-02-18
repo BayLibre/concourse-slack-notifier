@@ -20,4 +20,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: mkorpershoek/concourse-slack-notifier:latest
+          tags: baylibre/concourse-slack-notifier:latest
